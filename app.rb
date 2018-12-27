@@ -8,6 +8,6 @@ module FormsLab
       erb :root
     end
     
-
+  end # end of class
   
-end
+end # end of module
