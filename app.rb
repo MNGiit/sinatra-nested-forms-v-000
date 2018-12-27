@@ -8,6 +8,10 @@ module FormsLab
       erb :root
     end
     
+    get "/new" do
+      erb :"pirates/new"
+    end
+    
   end # end of class
   
 end # end of module
