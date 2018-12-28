@@ -13,8 +13,8 @@ module FormsLab
     end
     
     post "/show" do
-      # @pirate = Pirate.new(params[:pirate.name], params[:weight], params[:height])
-      # 
+      # @pirate = Pirate.new(params[:pirate.name], params[:weight], params[:height]) # doesn't work
+      @pirate = Pirate.new(params)
       erb :"pirates/show"
     end
 
