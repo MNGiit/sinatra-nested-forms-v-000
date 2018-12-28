@@ -14,7 +14,14 @@ module FormsLab
     
     post "/show" do
       # @pirate = Pirate.new(params[:pirate.name], params[:weight], params[:height]) # doesn't work
+      # get a single pirate's information ready
       @pirate = Pirate.new(params[:pirate])
+      
+      # pirate can have ships
+      @ships = []
+      params[:pirate][:ships].each do |info|
+        @ships << Ship.new(info)
+      end
       
       erb :"pirates/show"
     end
@@ -23,5 +30,3 @@ module FormsLab
   end # end of class
   
 end # end of module
-
-
